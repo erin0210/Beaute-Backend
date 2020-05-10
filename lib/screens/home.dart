@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
         ),
         onPressed: (){
           Navigator.of(context).pushNamed('/scanner');
-        },
+        }, //add scanner when add button is pressed
       ),
     );
   }
