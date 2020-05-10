@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:social_app_ui/util/data.dart';
+import 'package:beauty_app/util/data.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -25,7 +25,7 @@ class _ProfileState extends State<Profile> {
               SizedBox(height: 40),
               CircleAvatar(
                 backgroundImage: AssetImage(
-                  "assets/girl.jpeg",
+                  "assets/cm${random.nextInt(10)}.jpeg",
                 ),
                 radius: 50,
               ),
@@ -147,7 +147,7 @@ class _ProfileState extends State<Profile> {
                   return Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Image.asset(
-                      "assets/cm${random.nextInt(10)}.jpeg",
+                      "assets/product${random.nextInt(10)}.jpeg",
                       fit: BoxFit.cover,
                     ),
                   );

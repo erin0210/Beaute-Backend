@@ -14,6 +14,20 @@ List names = [
   "Stacy Christensen",
 ];
 
+List pnames = [
+  "Sunsilk",
+  "Nivea",
+  "Rexona",
+  "Darlie",
+  "Rosette",
+  "Bioglo",
+  "Dexter",
+  "Garnier",
+  "Head&Shoulders",
+  "Rehab",
+  "Finesse",
+];
+
 List messages = [
   "Hey, how are you doing?",
   "Are you available tomorrow?",
@@ -53,7 +67,7 @@ List posts = List.generate(13, (index)=>{
     "name": names[random.nextInt(10)],
     "dp": "assets/cm${random.nextInt(10)}.jpeg",
     "time": "${random.nextInt(50)} min ago",
-    "img": "assets/cm${random.nextInt(10)}.jpeg"
+    "img": "assets/product${random.nextInt(15)}.jpeg"
 });
 
 List chats = List.generate(13, (index)=>{
@@ -85,9 +99,9 @@ List conversation = List.generate(10, (index)=>{
   "isReply": random.nextBool(),
 });
 
-List friends = List.generate(13, (index)=>{
-  "name": names[random.nextInt(10)],
-  "dp": "assets/cm${random.nextInt(10)}.jpeg",
-  "status": "Anything could be here",
+List friends = List.generate(10, (index)=>{
+  "name": pnames[random.nextInt(10)],
+  "dp": "assets/product${random.nextInt(15)}.jpeg",
+  "status": "Current product cleanliness scale",
   "isAccept": random.nextBool(),
 });

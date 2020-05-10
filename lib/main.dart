@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:social_app_ui/screens/main_screen.dart';
+import 'package:beauty_app/screens/main_screen.dart';
+import 'package:beauty_app/screens/scanner.dart';
 import 'screens/signup.dart';
 
 void main() => runApp(new MyApp());
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/signup': (BuildContext context) => new SignupPage(),
-         '/main_screen': (BuildContext context) => new MainScreen()
+         '/main_screen': (BuildContext context) => new MainScreen(),
+         '/scanner': (BuildContext context) => new Scanner()
       },
       home: new MyHomePage(),
     );

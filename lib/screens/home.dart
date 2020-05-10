@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:social_app_ui/util/data.dart';
-import 'package:social_app_ui/widgets/post_item.dart';
+import 'package:beauty_app/util/data.dart';
+import 'package:beauty_app/widgets/post_item.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
           Icons.add,
         ),
         onPressed: (){
-          
+          Navigator.of(context).pushNamed('/scanner');
         },
       ),
     );

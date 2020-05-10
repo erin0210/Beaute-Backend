@@ -1,5 +1,5 @@
-name: social_app_ui
-description: A Social app UI made with flutter.
+name: beauty_app
+description: A beauty app UI made with flutter.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -54,7 +54,22 @@ flutter:
     - assets/cm8.jpeg
     - assets/cm9.jpeg
     - assets/cm0.jpeg
-    - assets/girl.jpeg
+    - assets/product1.jpeg
+    - assets/product2.jpeg
+    - assets/product3.jpeg
+    - assets/product4.jpeg
+    - assets/product5.jpeg
+    - assets/product6.jpeg
+    - assets/product7.jpeg
+    - assets/product8.jpeg
+    - assets/product9.jpeg
+    - assets/product10.jpeg
+    - assets/product11.jpeg
+    - assets/product12.jpeg
+    - assets/product13.jpeg
+    - assets/product14.jpeg
+    - assets/product0.jpeg
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

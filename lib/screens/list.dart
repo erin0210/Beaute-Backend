@@ -1,12 +1,19 @@
+import 'package:beauty_app/screens/home.dart';
 import 'package:flutter/material.dart';
-import 'package:social_app_ui/util/data.dart';
+import 'package:beauty_app/util/data.dart';
 
 class Friends extends StatefulWidget {
+
   @override
   _FriendsState createState() => _FriendsState();
 }
 
 class _FriendsState extends State<Friends> {
+  
+  
+    List <bool> pressButton1 = List.generate(10, (_) => false);
+    List <bool> pressButton2 = List.generate(10, (_) => false);
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +34,7 @@ class _FriendsState extends State<Friends> {
             icon: Icon(
               Icons.filter_list,
             ),
-            onPressed: (){},
+            onPressed: () {}
           ),
         ],
       ),
@@ -62,24 +69,26 @@ class _FriendsState extends State<Friends> {
               title: Text(friend['name']),
               subtitle: Text(friend['status']),
               trailing: friend['isAccept']
-                  ? FlatButton(
-                child: Text(
-                  "Dirty",
-                  style: TextStyle(
+                  ? new FlatButton(
+                child: new Text(pressButton1[index]? ('Clean') :
+                  ('Dirty'),
+                  style: new TextStyle(
                     color: Colors.white,
                   ),
                 ),
-                color: Colors.red,
-                onPressed: (){},
-              ):FlatButton(
-                child: Text(
-                  "Clean",
-                  style: TextStyle(
+
+                color: pressButton1[index]? Colors.green: Colors.red,
+                onPressed: () => setState(() => pressButton1[index] = !pressButton1[index]),
+            )
+              :FlatButton(
+                child: new Text(pressButton2[index]? ('Dirty') :
+                  ('Clean'),
+                  style: new TextStyle(
                     color: Colors.white,
                   ),
                 ),
-                color: Colors.green,
-                onPressed: (){},
+                 color: pressButton2[index]? Colors.red : Colors.green,
+                onPressed: () => setState(() => pressButton2[index] = !pressButton2[index]),
               ),
               onTap: (){},
             ),
@@ -89,4 +98,5 @@ class _FriendsState extends State<Friends> {
       ),
     );
   }
+ 
 }
