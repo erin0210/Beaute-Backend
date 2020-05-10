@@ -86,7 +86,13 @@ class _FriendsState extends State<Friends> {
                 ),
 
                 color: pressButton1[index]? Colors.green: Colors.red,
-                onPressed: () => setState(() => pressButton1[index] = !pressButton1[index]),
+                //onPressed: () => setState(() => pressButton1[index] = !pressButton1[index]),
+                onPressed: () {
+                    setState(() {
+                      pressButton1[index] = !pressButton1[index];
+                    }); 
+                }, 
+            
             )
               :FlatButton(
                 child: new Text(pressButton2[index]? ('Dirty') :
@@ -96,8 +102,13 @@ class _FriendsState extends State<Friends> {
                   ),
                 ),
                  color: pressButton2[index]? Colors.red : Colors.green,
-                onPressed: () => setState(() => pressButton2[index] = !pressButton2[index]),
-              ),
+                //onPressed: () => setState(() => pressButton2[index] = !pressButton2[index]),
+                onPressed: () { //toggle dirty-clean
+                    setState(() {
+                      pressButton1[index] = !pressButton1[index];
+                    }); 
+                },    
+          ),
               onTap: (){
                 setState(() {
                    friends.removeAt(index); //delete products from your list
