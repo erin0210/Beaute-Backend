@@ -55,7 +55,14 @@ class _FriendsState extends State<Friends> {
         itemCount: friends.length,
         itemBuilder: (BuildContext context, int index) {
           Map friend = friends[index];
-          return Padding(
+              /*return Dismissible(
+              key: Key(friends[index]),
+              onDismissed: (direction) {
+              setState(() {
+              friends.removeAt(index);
+            });
+          },*/
+              return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: ListTile(
               leading: CircleAvatar(
@@ -64,6 +71,7 @@ class _FriendsState extends State<Friends> {
                 ),
                 radius: 25,
               ),
+              
 
               contentPadding: EdgeInsets.all(0),
               title: Text(friend['name']),
@@ -90,8 +98,15 @@ class _FriendsState extends State<Friends> {
                  color: pressButton2[index]? Colors.red : Colors.green,
                 onPressed: () => setState(() => pressButton2[index] = !pressButton2[index]),
               ),
-              onTap: (){},
-            ),
+              onTap: (){
+                setState(() {
+                   friends.removeAt(index); //delete products from your list
+                });
+              },
+
+
+              )
+            //),
           );
         },
 
