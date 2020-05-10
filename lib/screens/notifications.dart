@@ -59,7 +59,11 @@ class _NotificationsState extends State<Notifications> {
                   fontSize: 11,
                 ),
               ),
-              onTap: (){},
+              onTap: (){
+                  setState(() {
+                   notifications.removeAt(index); //delete notifications from your list
+                });
+              },
             ),
           );
         },
