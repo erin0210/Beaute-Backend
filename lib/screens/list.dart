@@ -103,9 +103,9 @@ class _FriendsState extends State<Friends> {
                 ),
                  color: pressButton2[index]? Colors.red : Colors.green,
                 //onPressed: () => setState(() => pressButton2[index] = !pressButton2[index]),
-                onPressed: () { //toggle dirty-clean
+                onPressed: () { //toggle dirty-clean //update cleanliness scale
                     setState(() {
-                      pressButton1[index] = !pressButton1[index];
+                      pressButton2[index] = !pressButton2[index];
                     }); 
                 },    
           ),
