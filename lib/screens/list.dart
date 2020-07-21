@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:beauty_app/util/data.dart';
 
 import '../model/product.dart';
+import '../services/data_service.dart';
 
 class Friends extends StatefulWidget {
 
@@ -19,8 +20,17 @@ class _FriendsState extends State<Friends> {
 
   @override
   Widget build(BuildContext context) {
+    return FutureBuilder<List<Product>>(
+      future: dataService.getProductList(),
+      builder: (context, snapshot) {
+        if(snapshot.hasData) {
+          _product = snapshot.data;
+          return _buildMainScreen();
+        }
+        
+      }
+    )
 
-    
 
   }
     Scaffold _buildMainScreen() {
@@ -129,6 +139,21 @@ class _FriendsState extends State<Friends> {
           );
         },
 
+      ),
+    );
+  }
+
+  Scaffold _buildFetchingDataScreen() {
+    return Scaffold(
+      body : Center(
+        child: Column(
+          mainAxisAlignment : MainAxisAlignment.center,
+          children: <Widget>[
+            CircularProgressIndicator(),
+            SizedBox(height: 50),
+            Text('Fetching Product.....Please Wait'),
+          ],
+        ),
       ),
     );
   }
