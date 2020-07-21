@@ -13,29 +13,29 @@
 # REST API Server on Firebase.
 # @baseUrl = https://
 
-### Getting the list of todos
-GET {{baseUrl}}/todos
+### Getting the list of product
+GET {{baseUrl}}/pnames
 
-###  Getting a todo of given id
-GET {{baseUrl}}/todos/1
+###  Getting a product of given id
+GET {{baseUrl}}/pnames/1
 
-###  Create a new todo
-POST {{baseUrl}}/todos
+###  Create a new product
+POST {{baseUrl}}/pnames
 Content-Type: application/json
 
 {
-    "title": "New todo 3",
+    "title": "New Product",
     "completed" : false
 }
 
 
-### Update the status of a given todo (whether is completed or not)
-PATCH {{baseUrl}}/todos/1
+### Update the status of a given product name (whether is completed or not)
+PATCH {{baseUrl}}/pnames/1
 Content-Type: application/json
 
 {
     "completed": false
 }
 
-### Deleting a given todo
-DELETE {{baseUrl}}/todos/13
+### Deleting a given product name
+DELETE {{baseUrl}}/pnames/13

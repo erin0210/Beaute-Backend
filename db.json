@@ -2,47 +2,58 @@
     "pnames" : [
         {
             "id" : 1,
-            "pname" : "Sunsilk"
+            "title" : "Sunsilk",
+            "status" : "clean"
         },
         {
             "id" : 2,
-            "pname" : "Nivea"
+            "title" : "Nivea",
+            "status" : "clean"
         },
         {
             "id" : 3,
-            "pname" : "Rexona"
+            "title" : "Rexona",
+            "status" : "clean"
         },
         {
             "id" : 4,
-            "pname" : "Darlie"
+            "title" : "Darlie",
+            "status" : "clean"
         },
         {
             "id" : 5,
-            "pname" : "Rosette"
+            "title" : "Rosette",
+            "status" : "dirty"
         },
         {
             "id" : 6,
-            "pname" : "Bioglo"
+            "title" : "Bioglo",
+            "status" : "dirty"
         },
         {
             "id" : 7,
-            "pname" : "Dexter"
+            "title" : "Dexter",
+            "status" : "clean"
         },
         {
             "id" : 8,
-            "pname" : "Garnier"
+            "title" : "Garnier",
+            "status" : "dirty"
         },
         {
             "id" : 9,
-            "pname" : "Head&Shoulders"
+            "title" : "Head&Shoulders",
+            "status" : "clean"
         },
         {
             "id" : 10,
-            "pname" : "Rehab"
+            "title" : "Rehab",
+            "status" : "clean"
         },
         {
             "id" : 11,
-            "pname" : "Finesse"
+            "title" : "Finesse",
+            "status" : "dirty"
         }
     ]
 }
