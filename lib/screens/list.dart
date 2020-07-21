@@ -18,6 +18,8 @@ class _FriendsState extends State<Friends> {
     List <bool> pressButton2 = List.generate(10, (_) => false);
     List<Product> _product;
 
+
+//Fetch data from data service
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Product>>(
@@ -27,12 +29,12 @@ class _FriendsState extends State<Friends> {
           _product = snapshot.data;
           return _buildMainScreen();
         }
-        
+        return _buildFetchingDataScreen();
       }
-    )
-
-
+    );
   }
+
+//Mainscreen when success fetch the data
     Scaffold _buildMainScreen() {
     return Scaffold(
       appBar: AppBar(
@@ -133,6 +135,14 @@ class _FriendsState extends State<Friends> {
                 });
               },
 
+              //Delete product at database when long pressed
+              onLongPressed: () async {
+                await dataService.deleteProduct(
+                  id: _product[index].id
+                );
+                setState(() => _product.removeAt(index));
+              },
+
 
               )
             //),
@@ -143,6 +153,7 @@ class _FriendsState extends State<Friends> {
     );
   }
 
+//Interface while waiting fetch the data from data service
   Scaffold _buildFetchingDataScreen() {
     return Scaffold(
       body : Center(
