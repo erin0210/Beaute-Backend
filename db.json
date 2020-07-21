@@ -1,0 +1,48 @@
+{
+    "pnames" : [
+        {
+            "id" : 1,
+            "pname" : "Sunsilk"
+        },
+        {
+            "id" : 2,
+            "pname" : "Nivea"
+        },
+        {
+            "id" : 3,
+            "pname" : "Rexona"
+        },
+        {
+            "id" : 4,
+            "pname" : "Darlie"
+        },
+        {
+            "id" : 5,
+            "pname" : "Rosette"
+        },
+        {
+            "id" : 6,
+            "pname" : "Bioglo"
+        },
+        {
+            "id" : 7,
+            "pname" : "Dexter"
+        },
+        {
+            "id" : 8,
+            "pname" : "Garnier"
+        },
+        {
+            "id" : 9,
+            "pname" : "Head&Shoulders"
+        },
+        {
+            "id" : 10,
+            "pname" : "Rehab"
+        },
+        {
+            "id" : 11,
+            "pname" : "Finesse"
+        }
+    ]
+}
