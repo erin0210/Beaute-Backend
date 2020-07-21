@@ -25,7 +25,8 @@ Content-Type: application/json
 
 {
     "title": "New Product",
-    "completed" : false
+    "clean" : true,
+    "dirty" : false
 }
 
 
@@ -34,7 +35,8 @@ PATCH {{baseUrl}}/pnames/1
 Content-Type: application/json
 
 {
-    "completed": false
+    "clean": false,
+    "dirty": true
 }
 
 ### Deleting a given product name
