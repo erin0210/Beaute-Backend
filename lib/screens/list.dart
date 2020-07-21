@@ -123,17 +123,28 @@ class _FriendsState extends State<Friends> {
                 ),
                  color: pressButton2[index]? Colors.red : Colors.green,
                 //onPressed: () => setState(() => pressButton2[index] = !pressButton2[index]),
-                onPressed: () { //toggle dirty-clean //update cleanliness scale
-                    setState(() {
+               
+               //toggle dirty-clean & update cleanliness scale
+               //Update status of the product whether clean or dirty
+                onPressed: () async {
+                  Product updatedProduct = await dataService.updateProductStatus(
+                    id: _product[index].id,
+                    status: !_product[index].clean, //Update status clean
+                    status: !_product[index].dirty  //Update status dirty
+                  );
+
+                  setState(()=> _product[index].clean = updatedProduct.dirty);
+                   
+                  /*  setState(() {
                       pressButton2[index] = !pressButton2[index];
-                    }); 
+                    }); */
                 },    
-          ),
-              onTap: (){
+              ),
+              /*onTap: (){
                 setState(() {
                    friends.removeAt(index); //delete products from your list
                 });
-              },
+              },*/
 
               //Delete product at database when long pressed
               onLongPressed: () async {
