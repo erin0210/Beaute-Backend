@@ -2,6 +2,8 @@ import 'package:beauty_app/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:beauty_app/util/data.dart';
 
+import '../model/product.dart';
+
 class Friends extends StatefulWidget {
 
   @override
@@ -13,9 +15,15 @@ class _FriendsState extends State<Friends> {
   
     List <bool> pressButton1 = List.generate(10, (_) => false);
     List <bool> pressButton2 = List.generate(10, (_) => false);
-  
+    List<Product> _product;
+
   @override
   Widget build(BuildContext context) {
+
+    
+
+  }
+    Scaffold _buildMainScreen() {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
