@@ -16,6 +16,7 @@ class _FriendsState extends State<Friends> {
   
     List <bool> pressButton1 = List.generate(10, (_) => false);
     List <bool> pressButton2 = List.generate(10, (_) => false);
+ //Use to call the data service   
     List<Product> _product;
 
 

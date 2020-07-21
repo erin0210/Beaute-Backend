@@ -76,7 +76,7 @@ class DataService {
 
   // Updating the status of a given product  (whether is clean or dirty) in the server
   Future<Product> updateProductStatus({String id, bool status}) async {
-    final json = await patch('pnames/$id', data: {'clean': status});
+    final json = await patch('pnames/$id', data: {'clean': status}); //ni tak sure mcm mana nak buat dua status clean & dirty
     return Product.fromJson(json);
   }
 
