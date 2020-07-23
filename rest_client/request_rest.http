@@ -17,10 +17,6 @@
 GET {{baseUrl}}/pnames HTTP/1.1
 Content-Type: application/json
 
-###  Getting a product of given id
-GET {{baseUrl}}/pnames/1 HTTP/1.1
-Content-Type: application/json
-
 ###  Create a new product
 POST {{baseUrl}}/pnames HTTP/1.1
 Content-Type: application/json

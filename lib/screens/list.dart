@@ -73,16 +73,10 @@ class _FriendsState extends State<Friends> {
             ),
           );
         },
-        itemCount: friends.length,
+        itemCount: _product.length,
         itemBuilder: (BuildContext context, int index) {
           Map friend = friends[index];
-              /*return Dismissible(
-              key: Key(friends[index]),
-              onDismissed: (direction) {
-              setState(() {
-              friends.removeAt(index);
-            });
-          },*/
+           
               return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: ListTile(
@@ -127,17 +121,24 @@ class _FriendsState extends State<Friends> {
                
                //toggle dirty-clean & update cleanliness scale
                //Update status of the product whether clean or dirty
-                onPressed: () async {
-                  Product updatedProduct = await dataService.updateProductStatus(
+                onPressed: () {
+                  //Product updatedProduct = 
+                  setState(() {
+                     _product[index].clean = !_product[index].clean;
+                     
+                    dataService.updateProductStatus(
+                   
                     id: _product[index].id.toString(), // Integer id to String
                     status: !_product[index].clean //Update status clean
                     //status: !_product[index].dirty  //Update status dirty
                   );
-
-                  setState(() {
-                   _product[index].clean = updatedProduct.dirty;
-                   _product[index].dirty = updatedProduct.clean;
                   });
+                   
+
+                  //setState(() {
+                   //_product[index].clean = updatedProduct.dirty;
+                   //_product[index].dirty = updatedProduct.clean;
+                 // });
 
                   
                    
@@ -153,8 +154,8 @@ class _FriendsState extends State<Friends> {
               },*/
 
               //Delete product at database when long press
-              onLongPress: () async {
-                await dataService.deleteProduct(
+              onLongPress: () {
+                  dataService.deleteProduct(
                   id: _product[index].id.toString() // Integer id to String
                 );
                 setState(() => _product.removeAt(index));
