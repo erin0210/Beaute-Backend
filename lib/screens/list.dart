@@ -131,7 +131,7 @@ class _FriendsState extends State<Friends> {
                   Product updatedProduct = await dataService.updateProductStatus(
                     id: _product[index].id,
                     status: !_product[index].clean, //Update status clean
-                    status: !_product[index].dirty  //Update status dirty
+                   // status: !_product[index].dirty  //Update status dirty
                   );
 
                   setState(()=> _product[index].clean = updatedProduct.dirty);
@@ -147,8 +147,8 @@ class _FriendsState extends State<Friends> {
                 });
               },*/
 
-              //Delete product at database when long pressed
-              onLongPressed: () async {
+              //Delete product at database when long press
+              onLongPress: () async {
                 await dataService.deleteProduct(
                   id: _product[index].id
                 );
