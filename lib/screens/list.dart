@@ -130,11 +130,16 @@ class _FriendsState extends State<Friends> {
                 onPressed: () async {
                   Product updatedProduct = await dataService.updateProductStatus(
                     id: _product[index].id.toString(), // Integer id to String
-                    status: !_product[index].clean, //Update status clean
-                   // status: !_product[index].dirty  //Update status dirty
+                    status: !_product[index].clean //Update status clean
+                    //status: !_product[index].dirty  //Update status dirty
                   );
 
-                  setState(()=> _product[index].clean = updatedProduct.dirty);
+                  setState(() {
+                   _product[index].clean = updatedProduct.dirty;
+                   _product[index].dirty = updatedProduct.clean;
+                  });
+
+                  
                    
                   /*  setState(() {
                       pressButton2[index] = !pressButton2[index];
