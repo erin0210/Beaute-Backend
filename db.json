@@ -1,70 +1,28 @@
 {
-    "pnames" : [
-        {
-            "id" : 1,
-            "title" : "Sunsilk",
-            "clean" : true,
-            "dirty" : false
-        },
-        {
-            "id" : 2,
-            "title" : "Nivea",
-            "clean" : true,
-            "dirty" : false
-        },
-        {
-            "id" : 3,
-            "title" : "Rexona",
-            "clean" : true,
-            "dirty" : false
-        },
-        {
-            "id" : 4,
-            "title" : "Darlie",
-            "clean" : true,
-            "dirty" : false
-        },
-        {
-            "id" : 5,
-            "title" : "Rosette",
-            "clean" : false,
-            "dirty" : true
-        },
-        {
-            "id" : 6,
-            "title" : "Bioglo",
-            "clean" : false,
-            "dirty" : true
-        },
-        {
-            "id" : 7,
-            "title" : "Dexter",
-            "clean" : false,
-            "dirty" : true
-        },
-        {
-            "id" : 8,
-            "title" : "Garnier",
-            "clean" : true,
-            "dirty" : false
-        },
-        {
-            "id" : 9,
-            "title" : "Head&Shoulders",
-            "clean" : true,
-            "dirty" : false
-        },
-        {
-            "id" : 10,
-            "title" : "Rehab",
-            "clean" : true,
-            "dirty" : false
-        },
-        {
-            "id" : 11,
-            "title" : "Finesse",
-            "clean" : true,
-            "dirty" : false
-        }
-    ]
+  "pnames": [
+    {
+      "id": 7,
+      "title": "Dexter",
+      "clean": true,
+      "dirty": true
+    },
+    {
+      "id": 9,
+      "title": "Head&Shoulders",
+      "clean": true,
+      "dirty": false
+    },
+    {
+      "id": 10,
+      "title": "Rehab",
+      "clean": true,
+      "dirty": false
+    },
+    {
+      "id": 11,
+      "title": "Finesse",
+      "clean": true,
+      "dirty": false
+    }
+  ]
 }

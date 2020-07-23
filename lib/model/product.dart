@@ -1,6 +1,6 @@
 
 class Product {
-  String id;
+  int id;
   String title;
   bool clean;
   bool dirty;
