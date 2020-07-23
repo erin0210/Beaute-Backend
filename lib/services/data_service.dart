@@ -16,12 +16,12 @@ class DataService {
   //     'https://jumail-utm-rest-node-mysql.herokuapp.com';
 
   // Live server on Firebase
-  static const String baseUrl =
-      'https://us-central1-jumail-backend-firebase-rest.cloudfunctions.net/api';
+ // static const String baseUrl =
+     // 'https://us-central1-jumail-backend-firebase-rest.cloudfunctions.net/api';
 
   // JSON server online
-  // static const String baseUrl =
-  //       'https://my-json-server.typicode.com/jumail-utm/backend_node_mysql'; // Change the IP address to your PC's IP. Remain the port number 3000 unchanged.
+   static const String baseUrl =
+         'http://192.168.1.10:3000'; // Change the IP address to your PC's IP. Remain the port number 3000 unchanged.
 
   // GET request
   Future get(String endpoint) async {
