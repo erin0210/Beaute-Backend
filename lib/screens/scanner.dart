@@ -10,13 +10,13 @@ class Scanner extends StatefulWidget {
 }
 
 class _ScannerState extends State<Scanner> {
-  @override
+  
 
   String barcode = "";
   Future scanBarcode() async {
     String barcodeResult = await FlutterBarcodeScanner.scanBarcode("aff6666", "Cancel", false);
   setState(() {
-    barcode = barcodeResult;
+     barcode = barcodeResult;
   });
   
   }

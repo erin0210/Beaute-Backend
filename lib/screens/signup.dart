@@ -6,6 +6,20 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
+
+  Future _showAlert(BuildContext context, String message) async {
+    return showDialog(
+      context: context,
+      child: new AlertDialog(
+        title: new Text(message),
+        actions: <Widget>[
+          new FlatButton(onPressed: () => Navigator.pop(context),
+           child: new Text('OK'))
+        ],
+      )
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -84,7 +98,9 @@ class _SignupPageState extends State<SignupPage> {
                         color: Colors.green,
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                              _showAlert(context, 'Signup Successful! Click "Go Back" to proceed with login');
+                          },
                           child: Center(
                             child: Text(
                               'SIGNUP',

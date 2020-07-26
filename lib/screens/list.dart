@@ -123,7 +123,7 @@ class _FriendsState extends State<Friends> {
                //toggle dirty-clean & update cleanliness scale
                //Update status of the product whether clean or dirty
                 onPressed: () {
-                  //Product updatedProduct = 
+                 // Product updatedProduct = 
                   /*setState(() {
                      _product[index].clean = !_product[index].clean;
                      
@@ -148,18 +148,13 @@ class _FriendsState extends State<Friends> {
                     }); 
                 },    
               ),
-              /*onTap: (){
-                setState(() {
-                   friends.removeAt(index); //delete products from your list
-                });
-              },*/
-
+              
               //Delete product at database when long press
               onLongPress: () {
-                  dataService.deleteProduct(
-                  id: _product[index].id.toString() // Integer id to String
-                );
-                setState(() => _product.removeAt(index));
+                 // dataService.deleteProduct(
+                 // id: _product[index].id.toString() // Integer id to String
+               // );
+                setState(() => friends.removeAt(index));
               },
 
 
