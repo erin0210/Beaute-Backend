@@ -23,7 +23,7 @@ Content-Type: application/json
 
 {
     "title": "New Product",
-    "clean" : true
+    "clean" : false
 }
 
 
@@ -32,9 +32,9 @@ PATCH {{baseUrl}}/pnames/1 HTTP/1.1
 Content-Type: application/json
 
 {
-    "clean": false
+    "clean": true
 }
 
 ### Deleting a given product name
-DELETE {{baseUrl}}/pnames/13 HTTP/1.1
+DELETE {{baseUrl}}/pnames/2 HTTP/1.1
 Content-Type: application/json

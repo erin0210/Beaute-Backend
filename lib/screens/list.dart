@@ -14,8 +14,8 @@ class Friends extends StatefulWidget {
 class _FriendsState extends State<Friends> {
   
   
-    List <bool> pressButton1 = List.generate(10, (_) => false);
-    List <bool> pressButton2 = List.generate(10, (_) => false);
+   List <bool> pressButton1 = List.generate(10, (_) => false);
+   List <bool> pressButton2 = List.generate(10, (_) => false);
  //Use to call the data service   
     List<Product> _product;
 
@@ -73,7 +73,7 @@ class _FriendsState extends State<Friends> {
             ),
           );
         },
-        itemCount: _product.length,
+        itemCount: friends.length,
         itemBuilder: (BuildContext context, int index) {
           Map friend = friends[index];
            
@@ -106,6 +106,7 @@ class _FriendsState extends State<Friends> {
                     setState(() {
                       pressButton1[index] = !pressButton1[index];
                     }); 
+                    
                 }, 
             
             )
@@ -123,16 +124,16 @@ class _FriendsState extends State<Friends> {
                //Update status of the product whether clean or dirty
                 onPressed: () {
                   //Product updatedProduct = 
-                  setState(() {
+                  /*setState(() {
                      _product[index].clean = !_product[index].clean;
                      
                     dataService.updateProductStatus(
                    
                     id: _product[index].id.toString(), // Integer id to String
-                    status: !_product[index].clean //Update status clean
+                    status: _product[index].clean //Update status clean
                     //status: !_product[index].dirty  //Update status dirty
                   );
-                  });
+                  }); */
                    
 
                   //setState(() {
@@ -142,9 +143,9 @@ class _FriendsState extends State<Friends> {
 
                   
                    
-                  /*  setState(() {
+                    setState(() {
                       pressButton2[index] = !pressButton2[index];
-                    }); */
+                    }); 
                 },    
               ),
               /*onTap: (){
