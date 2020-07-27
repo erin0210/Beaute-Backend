@@ -23,6 +23,6 @@ GROUP MEMBERS :-
 3. SITI ARINA BINTI MD LATEH
 4. NURUL IZWANI BINTI JAIDI
 
-VIDEO URL : https://youtu.be/REhHbEEHYtY
+VIDEO URL : https://youtu.be/ARJNaRQ-emw
 
 GITHUB REPO : https://github.com/erin0210/Beaute-Backend
