@@ -25,7 +25,8 @@ class DataService {
 
   // GET request
   Future get(String endpoint) async {
-    final response = await http.get('$baseUrl/$endpoint');
+    final response = await http.get('$baseUrl/$endpoint',
+      headers: {'Content-Type': 'application/json'});
 
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
@@ -57,10 +58,11 @@ class DataService {
 
   // DELETE request
   Future delete(String endpoint) async {
-    final response = await http.delete('$baseUrl/$endpoint');
+    final response = await http.delete('$baseUrl/$endpoint',
+      headers: {'Content-Type': 'application/json'});
 
     if (response.statusCode == 200) {
-      return; // jsonDecode(response.body);
+      return jsonDecode(response.body);
     }
     throw response;
   }
@@ -80,15 +82,16 @@ class DataService {
     return Product.fromJson(json);
   }
 
-  // Creating a new Product  in the server
+  // Creating a new Product in the server
   Future<Product> createProduct({Product product}) async {
     final json = await post('pnames', data: product);
     return Product.fromJson(json);
   }
 
   // Deleting a given Product  from the server
-  Future deleteProduct({String id}) async {
-    await delete('pnames/$id');
+  Future<Product> deleteProduct({String id}) async {
+    final json = await delete('pnames/$id');
+    return Product.fromJson(json);
   }
 }
 
